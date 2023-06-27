@@ -1,0 +1,32 @@
+﻿@model List<Test_task.Models.gruzcar>
+
+@{
+    ViewData["Title"] = "Грузовые";
+}
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var model in Model)
+{
+  <div style="text-align: center; margin-bottom: 80px;">
+    <img src="@Url.Content(model.ImagePath)" style="width: 50%; height: auto; margin-bottom: 50px;">
+   
+    <div style="display: flex; justify-content: center;">
+    <div>@Html.DisplayFor(modelItem => model.Autor)</div>
+    <div style=" margin-left: 80px">@Html.DisplayFor(modelItem => model.Name_Auto)</div>
+    <div style=" margin-left: 80px">@Html.DisplayFor(modelItem => model.Date_Create)</div>
+    </div>
+  
+
+     <div style=" transform: translateX(80%); text-align: center; width: 500px;  margin-top: 50px">
+            @Html.DisplayFor(modelItem => model.info)
+        </div>
+
+    <!--
+    <tr>
+      <td>@Html.DisplayFor(modelItem => model.Category)</td>
+      <td>@Html.DisplayFor(modelItem => model.Date_Update)</td>
+    </tr>
+    -->
+
+  </div>
+}

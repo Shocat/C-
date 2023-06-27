@@ -1,0 +1,33 @@
+﻿
+@model Test_task.Models.ADD
+
+@{
+    ViewData["Title"] = "Добавить пост";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<form method="post" asp-controller="ADD" asp-action="Check" enctype="multipart/form-data" style="width: 500px; margin: 0 auto; margin-bottom: 30px">
+  <div style="margin-bottom: 30px">
+    <input asp-for="Name" placeholder="Введите Имя" />
+    <span asp-validation-for="Name"></span>
+  </div>
+  <div style="margin-bottom: 30px">
+    <input asp-for="SurName" placeholder="Введите Фамилию" />
+    <span asp-validation-for="SurName"></span>
+  </div>
+  <div style="margin-bottom: 30px">
+    <input type="file" name="Photo" />
+  </div>
+
+   <div style="margin-bottom: 30px">
+    <input asp-for="pass" placeholder="Введите пароль" />
+    <span asp-validation-for="pass"></span>
+  </div>
+   <div style="margin-bottom: 30px">
+    <input asp-for="mail" placeholder="Введите почту" />
+    <span asp-validation-for="mail"></span>
+  </div>
+  <input type="submit" value="Отправить" />
+</form>
+

@@ -10,7 +10,7 @@ namespace Test_task.Models
 
         public DbSet<Car> Cars { get; set; }
         
-        public DbSet<Contents> Contents { get; set; }
+        public DbSet<Content> Contents { get; set; }
         public DbSet<gruzcar> GruzCar { get; set; }
        
 

@@ -21,15 +21,15 @@ namespace Test_task.Controllers
         public IActionResult Index()
         {
             var models = _dbContext.Cars
-                .Join(_dbContext.Contents, car => car.Id, content => content.Id, (car, content) => new Car
+                .Join(_dbContext.Contents, car => car.Id, content => content.Car_Id, (car, content) => new Car
                 {
                     Name_Auto = car.Name_Auto,
                     Category = car.Category,
-                    Autor = content.Autor,
-                    Date_Create = content.Date_Create,
-                    Date_Update = content.Date_Update,
+                    Autor = car.Autor,
+                    Date_Create = car.Date_Create,
+                    Date_Update = car.Date_Update,
                     ImagePath = content.ImagePath,
-                    info = content.Info
+                    Info = content.Info
                 })
                 .ToList();
 

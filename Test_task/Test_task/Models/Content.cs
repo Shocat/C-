@@ -2,7 +2,7 @@
 
 namespace Test_task.Models
 {
-    public class Contents
+    public class Content
     {
         public int Id { get; set; }
         public string Info { get; set; }

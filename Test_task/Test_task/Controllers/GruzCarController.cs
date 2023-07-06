@@ -25,8 +25,8 @@ namespace Test_task.Controllers
                     Autor = c.Autor,
                     Date_Create = c.Date_Create,
                     Date_Update = c.Date_Update,
-                    ImagePath = c.ImagePath,
-                    info = c.info
+                    ImagePath = c.Content.ImagePath,
+                    info = c.Content.ImagePath
                 })
                 .ToList();
 

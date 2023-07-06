@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Npgsql;
-using Test_task.Controllers.Test_task.Controllers;
+using Test_task.Controllers;
 using Test_task.Models;
 
 namespace Test_task.Controllers
